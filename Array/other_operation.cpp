@@ -47,7 +47,7 @@ int Get(struct Array arr, int index)
     }
 }
 
-// function to set the value at the given index of an array 
+// function to set the value at the given index of an array
 void Set(struct Array *arr, int value, int index)
 {
     if (index >= 0 && index < arr->length)
@@ -56,17 +56,32 @@ void Set(struct Array *arr, int value, int index)
     }
 }
 
-// function to find the total sum of an array element of given array 
-int SumOfArray(struct Array arr){
+// function to find the total sum of an array element of given array
+int SumOfArray(struct Array arr)
+{
     int sum = 0;
     int i;
-    for(i = 0; i< arr.length; i++){
+    for (i = 0; i < arr.length; i++)
+    {
         sum = sum + arr.A[i];
     }
     return sum;
 }
 
-// function to display an element of an array 
+// function to find the average of an array element
+
+float Average(struct Array arr)
+{
+    int sum = 0;
+    int i;
+    for (i = 0; i < arr.length; i++)
+    {
+        sum = sum + arr.A[i];
+    }
+    return sum / arr.length;
+}
+
+// function to display an element of an array
 void Display(struct Array arr)
 {
     int i;
@@ -91,7 +106,10 @@ int main()
     cout << "The min value of an given array is: " << minValue << endl;
 
     int totalSum = SumOfArray(arr);
-    cout<<"The sum of an array element is: "<<totalSum<<endl;
+    cout << "The sum of an array element is: " << totalSum << endl;
+
+    float average = Average(arr);
+    cout << "The average of an array element is: " << average << endl;
 
     Display(arr);
     return 0;
