@@ -45,6 +45,7 @@ int Get(struct Array arr, int index)
     {
         return arr.A[index];
     }
+    return 0;
 }
 
 // function to set the value at the given index of an array
